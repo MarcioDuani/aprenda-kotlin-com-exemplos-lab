@@ -8,7 +8,7 @@ data class Usuario(val id: Int, var nome: String) {
     }
 }
 
-data class ConteudoEducacional(val nome: String, val duracao: Int = 60, val nivel: Nivel)
+data class ConteudoEducacional(val nome: String, val duracao: Int, val nivel: Nivel)
 
 data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) {
     private val inscritos = mutableListOf<Usuario>()
