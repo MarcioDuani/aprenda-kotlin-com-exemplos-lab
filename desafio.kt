@@ -42,7 +42,7 @@ fun main() {
     val conteudoBasico = criarConteudo("Kotlin Básico", 10, Nivel.BASICO)
     val conteudoAvancado = criarConteudo("Kotlin Avançado", 30, Nivel.AVANCADO)
 
-    val formacaoKotlin = Formacao("Formação Kotlin", mutableListOf(conteudoBasico, conteudoAvancado))
+    val formacaoKotlin = Formacao("Curso Completo de Kotlin", mutableListOf(conteudoBasico, conteudoAvancado))
 
     formacaoKotlin.matricular(usuario1)
     formacaoKotlin.matricular(usuario2)
