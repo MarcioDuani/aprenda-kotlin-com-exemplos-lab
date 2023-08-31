@@ -8,7 +8,7 @@ data class Usuario(val id: Int, var nome: String) {
     }
 }
 
-data class ConteudoEducacional(val nome: String, val duracao: Int = 60, val nivel: Nivel)
+data class ConteudoEducacional(val nome: String, val duracao: Int, val nivel: Nivel)
 
 data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) {
     private val inscritos = mutableListOf<Usuario>()
@@ -22,11 +22,11 @@ data class Formacao(val nome: String, var conteudos: List<ConteudoEducacional>) 
         println("Nome da Formação: $nome")
         println("Conteúdos da Formação:")
         for (conteudo in conteudos) {
-            println("- ${conteudo.nome} (Duração: ${conteudo.duracao} minutos, Nível: ${conteudo.nivel})")
+            println(" ${conteudo.nome} (Duração: ${conteudo.duracao} minutos, Nível: ${conteudo.nivel})")
         }
         println("Usuários Inscritos na Formação:")
         for (usuario in inscritos) {
-            println("- ID: ${usuario.id}, Nome: ${usuario.nome}")
+            println(" ID: ${usuario.id}, Nome: ${usuario.nome}")
         }
     }
 }
@@ -51,7 +51,7 @@ fun main() {
 
     println("Formações Inscritas por ${usuario1.nome}:")
     for (formacao in usuario1.formacoesInscritas) {
-        println("- ${formacao.nome}")
+        println(" ${formacao.nome}")
     }
     
 }
